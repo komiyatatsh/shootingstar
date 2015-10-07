@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#SUBJECT=hoge
+#if subject is "=?ISO-2022-JP?B?GyRCRnxLXDhsJUYlOSVIGyhC?=",
+#you imput GyRCRnxLXDhsJUYlOSVIGyhC string.
+# ex. =?...?= is header, footer
+#     ISO-2022-JP?B? is ISO-2022-JP / Base64 / means.
+
+#SUBJECT="GyRCRnxLXDhsJUYlOSVIGyhC"
+#"日本語テスト"
+
+SUBJECT="GyRCRnxLXDhsJUYlOSVIGyhC"
+SUBJECT="$SUBJECT"."\n"
+
+echo "$SUBJECT" | nkf -J -mB -w
