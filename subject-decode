@@ -10,6 +10,7 @@
 #"日本語テスト"
 
 SUBJECT="GyRCRnxLXDhsJUYlOSVIGyhC"
+#改行を入れる^^;
 SUBJECT="$SUBJECT"."\n"
 
 echo "$SUBJECT" | nkf -J -mB -w
